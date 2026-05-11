@@ -1,4 +1,4 @@
-# Signal Pipeline MLOps Assessment
+# Signal Pipeline MLOps
 
 ## Overview
 This project implements a minimal production-style MLOps batch pipeline for generating trading signals using rolling averages on OHLCV data.
