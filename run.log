@@ -1,0 +1,123 @@
+2026-05-11 15:27:43,860 - INFO - Loading configuration
+2026-05-11 15:27:43,860 - INFO - Configuration loaded successfully
+2026-05-11 15:27:43,860 - INFO - Seed set to 42
+2026-05-11 15:27:43,860 - INFO - Loading dataset
+2026-05-11 15:27:43,868 - ERROR - Pipeline failed: Input file not found: data.csv
+Traceback (most recent call last):
+  File "/Users/palak/Desktop/signal-pipeline-mlops/src/validator.py", line 13, in load_and_validate_dataset
+    df = pd.read_csv(input_path)
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/common.py", line 926, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'data.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/palak/Desktop/signal-pipeline-mlops/run.py", line 65, in main
+    df = load_and_validate_dataset(args.input)
+  File "/Users/palak/Desktop/signal-pipeline-mlops/src/validator.py", line 16, in load_and_validate_dataset
+    raise FileNotFoundError(
+        f"Input file not found: {input_path}"
+    )
+FileNotFoundError: Input file not found: data.csv
+2026-05-11 15:29:17,613 - INFO - Loading configuration
+2026-05-11 15:29:17,614 - INFO - Configuration loaded successfully
+2026-05-11 15:29:17,614 - INFO - Seed set to 42
+2026-05-11 15:29:17,614 - INFO - Loading dataset
+2026-05-11 15:29:17,620 - ERROR - Pipeline failed: Input file not found: data.csv
+Traceback (most recent call last):
+  File "/Users/palak/Desktop/signal-pipeline-mlops/src/validator.py", line 13, in load_and_validate_dataset
+    df = pd.read_csv(input_path)
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/palak/miniconda3/lib/python3.13/site-packages/pandas/io/common.py", line 926, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'data.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/palak/Desktop/signal-pipeline-mlops/run.py", line 65, in main
+    df = load_and_validate_dataset(args.input)
+  File "/Users/palak/Desktop/signal-pipeline-mlops/src/validator.py", line 16, in load_and_validate_dataset
+    raise FileNotFoundError(
+        f"Input file not found: {input_path}"
+    )
+FileNotFoundError: Input file not found: data.csv
+2026-05-11 15:31:40,007 - INFO - Loading configuration
+2026-05-11 15:31:40,008 - INFO - Configuration loaded successfully
+2026-05-11 15:31:40,008 - INFO - Seed set to 42
+2026-05-11 15:31:40,008 - INFO - Loading dataset
+2026-05-11 15:31:40,041 - ERROR - Pipeline failed: Missing required columns: ['close']
+Traceback (most recent call last):
+  File "/Users/palak/Desktop/signal-pipeline-mlops/run.py", line 65, in main
+    df = load_and_validate_dataset(args.input)
+  File "/Users/palak/Desktop/signal-pipeline-mlops/src/validator.py", line 43, in load_and_validate_dataset
+    raise ValueError(
+        f"Missing required columns: {missing_columns}"
+    )
+ValueError: Missing required columns: ['close']
+2026-05-11 15:50:49,737 - INFO - Loading configuration
+2026-05-11 15:50:49,738 - INFO - Configuration loaded successfully
+2026-05-11 15:50:49,738 - INFO - Seed set to 42
+2026-05-11 15:50:49,738 - INFO - Loading dataset
+2026-05-11 15:50:49,765 - INFO - Dataset loaded successfully with 10000 rows
+2026-05-11 15:50:49,765 - INFO - Computing rolling mean and signals
+2026-05-11 15:50:49,771 - INFO - Metrics saved to metrics.json
+2026-05-11 15:50:49,772 - INFO - Pipeline completed successfully in 33.76 ms
+2026-05-11 10:27:59,985 - INFO - Loading configuration
+2026-05-11 10:27:59,987 - INFO - Configuration loaded successfully
+2026-05-11 10:27:59,987 - INFO - Seed set to 42
+2026-05-11 10:27:59,987 - INFO - Loading dataset
+2026-05-11 10:28:00,002 - INFO - Dataset loaded successfully with 10000 rows
+2026-05-11 10:28:00,002 - INFO - Computing rolling mean and signals
+2026-05-11 10:28:00,006 - INFO - Metrics saved to metrics.json
+2026-05-11 10:28:00,006 - INFO - Pipeline completed successfully in 19.54 ms
+2026-05-11 10:33:34,678 - INFO - Loading configuration
+2026-05-11 10:33:34,680 - INFO - Configuration loaded successfully
+2026-05-11 10:33:34,680 - INFO - Seed set to 42
+2026-05-11 10:33:34,681 - INFO - Loading dataset
+2026-05-11 10:33:34,694 - INFO - Dataset loaded successfully with 10000 rows
+2026-05-11 10:33:34,694 - INFO - Computing rolling mean and signals
+2026-05-11 10:33:34,697 - INFO - Metrics saved to metrics.json
+2026-05-11 10:33:34,697 - INFO - Pipeline completed successfully in 17.32 ms
